@@ -1,0 +1,94 @@
+/* CSS yang telah Anda berikan sudah cukup baik, tetapi pastikan untuk memperbaiki beberapa hal berikut: */
+
+.dropdown-menu {
+  min-width: 18.7em;
+  position: relative;
+  display: inline-block;
+  max-height: 43.5px;
+  overflow: hidden;
+  top: 0.5em;
+  text-align: center;
+  white-space: nowrap;
+  color: #000000;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+}
+
+.dropdown-menu input {
+  width: 1px;
+  height: 1px;
+  display: inline-block;
+  position: absolute;
+  opacity: 0.01;
+}
+
+.dropdown-menu label {
+  height: 3em;
+  display: block;
+  border-top: 0.06em solid #ccc;
+  line-height: 3em;
+  padding-right: 1em;
+  cursor: pointer;
+}
+
+.dropdown-menu label:nth-child(2) {
+  margin-top: 3em;
+  border-top: 0.06em solid #fff;
+}
+
+.dropdown-menu input:checked+label {
+  display: block;
+  border-top: none;
+  position: absolute;
+  top: -2px;
+  margin-right: 3px;
+  width: 100%;
+}
+
+.dropdown-menu::after {
+  content: "";
+  position: absolute;
+  right: 0.8em;
+  top: 1.3em;
+  border: 0.3em solid #2f2931;
+  border-color: #800000 transparent transparent transparent;
+}
+
+.dropdown-menu.expan {
+  border: 0.06em solid #ccc;
+  background: #fff;
+  border-radius: 0.25em;
+  padding: 0;
+  box-shadow: rgba(0,0,0, 0.1) 3px 3px 5px 0px;
+  max-height: 25em;
+  color: #000000;
+}
+
+.dropdown-menu.expan label:hover {
+  background-color: #ccc;
+}
+
+.dropdown-menu.expan::after {
+  transform: rotate(-180deg);
+  top: 0.55em;
+}
+
+/* Media Queries */
+@media (max-width: 584px) {
+  .containerform {
+    max-width: 100%;
+  }
+  .card-details .card-box {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  .dropdown-menu {
+    width: 100%;
+  }
+}
